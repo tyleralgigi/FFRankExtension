@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Draft Ranking Adjustments",
+    "description": "Will portray how much higher or lower the draft site has the player ranked.",
+    "version": "1.0",
+    "content_scripts": [
+        {
+          "matches": ["*://sleeper.com/draft/*"],
+          "js": ["content.js"]
+        }
+    ],
+    "permissions": [
+      "activeTab"
+    ]
+}
