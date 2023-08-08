@@ -894,18 +894,6 @@ const data = [
   }
 ];
 
-
-
-// rgb(255,0,0)
-var color1_red=255;
-var color1_green=0;
-var color1_blue=0;
-
-// rgb(0,0,255)
-var color2_red=0;
-var color2_green=255;
-var color2_blue=0;
-
 // Function to modify the background color of all paragraph elements
 function modifyParagraphBackground() {
 
@@ -933,20 +921,30 @@ function modifyParagraphBackground() {
         
         
       }else{
-        let resultRed = 0;
-        let resultGreen = 0;
-        let resultBlue = 0;
+        let resultRed = 255;
+        let resultGreen = 255;
+        let resultBlue = 255;
         
         
-        if(obj.SleepvFP > 0.000001){
-          resultGreen = 255 - (obj.SleepvFP  * (255));
+        if(obj.SleepvFP == 0.00){
+          resultRed = 255;
+          resultGreen = 255;
+          resultBlue = 255;
+        }else if(obj.SleepvFP > 0.000000000001){
+          var temp = obj.SleepvFP  * (255);
+          resultRed = 200 - temp;
+          resultBlue = 200 - temp;
         }else{
-          resultRed = 255 - ((-1 * obj.SleepvFP) * (255));
-
+          var temp = ((-1) * obj.SleepvFP  * (255));
+          resultGreen = 200 - temp;
+          resultBlue = 200 - temp;
+          
         }
 
         spanElement.textContent = obj.SleepvFP;
-        spanElement.style.color=`rgb(${resultRed},${resultGreen},${0})`;
+        spanElement.style.color=`rgb(${resultRed},${resultGreen},${resultBlue})`;
+        console.log(playerName);
+        console.log(`rgb(${resultRed},${resultGreen},${0})`);
       }
 
       const targetElement = child.querySelector('.adp.col-sml.stat-cell')
@@ -964,18 +962,7 @@ function modifyParagraphBackground() {
   }
   
 
-function contentChanged() {
-  modifyParagraphBackground()
-}
-
-window.addEventListener('scroll', function(){ 
-  contentChanged();
-}, true);
-
-
-window.addEventListener('load', function(){
-
-
+function modifyHeader(){
   const innerScrollContainer =  document.querySelectorAll('div[class="header"]');
   const adpDivs = innerScrollContainer[2].querySelectorAll('.adp.col-sml');
   
@@ -988,24 +975,19 @@ window.addEventListener('load', function(){
 
   adpDivs[1].parentNode.insertBefore(divHeader, adpDivs[1]);
   adpDivs[0].parentNode.insertBefore(divHeader1, adpDivs[0]);
+};
 
+function contentChanged() {
+  modifyParagraphBackground()
+};
+
+window.addEventListener('scroll', function(){ 
   contentChanged();
 }, true);
 
 
+window.addEventListener('load', function(){
+  modifyHeader();
+  contentChanged();
+}, true);
 
-
-/*const data = `JFK, 40.63980103, -73.77890015
-LAX, 33.94250107, -118.4079971
-SEA, 47.44900131, -122.3089981`
-
-const splitByLines = data.split(/\n/)
-const splitByCommas = splitByLines.map(arr => arr.split(','))
-
-const output = {}
-splitByCommas.map(([loc, lat, lon ]) => {
-  output[loc] = { lat, lon }
-})
-
-console.log(output)
-*/
