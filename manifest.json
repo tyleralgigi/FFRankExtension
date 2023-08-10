@@ -3,6 +3,10 @@
     "name": "Draft Ranking Adjustments",
     "description": "Will portray how much higher or lower the draft site has the player ranked.",
     "version": "1.0",
+    "action": {
+      "default_title": "Say It",
+      "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
           "matches": ["*://sleeper.com/draft/*"],
@@ -10,6 +14,7 @@
         }
     ],
     "permissions": [
-      "activeTab"
+      "activeTab",
+      "storage"
     ]
 }

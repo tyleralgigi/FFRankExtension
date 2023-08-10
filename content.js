@@ -943,8 +943,7 @@ function modifyParagraphBackground() {
 
         spanElement.textContent = obj.SleepvFP;
         spanElement.style.color=`rgb(${resultRed},${resultGreen},${resultBlue})`;
-        console.log(playerName);
-        console.log(`rgb(${resultRed},${resultGreen},${0})`);
+        
       }
 
       const targetElement = child.querySelector('.adp.col-sml.stat-cell')
