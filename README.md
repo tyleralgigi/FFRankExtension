@@ -1,16 +1,17 @@
 # FFRankExtension
 
-**FFRankExtension** is a Chrome extension designed to enhance your fantasy football drafting experience on the Sleeper platform. It introduces a custom "Rank" column directly into the Sleeper draft board, allowing you to manage and view player rankings without relying on external spreadsheets.
+**FFRankExtension** is a Chrome extension designed to optimize your fantasy football drafting experience on the Sleeper platform. It seamlessly integrates **ADP (Average Draft Position)** and **vFP (Variation Fantasy Players)** columns directly into the Sleeper draft board, allowing users to **identify undervalued and overvalued players** without relying on external spreadsheets. This extension provides a **smarter, data-driven approach** to drafting by comparing Sleeper’s rankings with aggregated data from multiple fantasy sources.
 
 <em>The data in this project currently is from 2023. It will be updated for the 2025 season</em>
 
 ## Features
 
-- **Custom Rank Integration:** Seamlessly integrates a new Rank column into the Sleeper draft interface, allowing users to identify undervalued and overvalued players by comparing the site's current rankings with custom rankings.
-- **User-Friendly Interface:** Designed to blend naturally with the existing Sleeper UI for an intuitive drafting experience.
+- **Custom Rank Integration:** Enhances the Sleeper draft interface by adding an **ADP (Average Draft Position)** and **vFP (Variation Fantasy Players)** column, allowing users to spot undervalued and overvalued players by comparing Sleeper's rankings with custom rankings.
+- **Column Significance:** **ADP** aggregates draft position data from multiple fantasy sources, including PFF, to determine the optimal draft spot for each player. **vFP** highlights the difference between Sleeper's rankings and the calculated ADP, helping users make informed drafting decisions.
+- **Seamless UI Integration:** Designed to fit naturally within the Sleeper interface, ensuring an intuitive and effortless drafting experience.
 
 ## Preview
-![Preview](https://i.imgur.com/OtOCHJK.png)
+![Preview](https://i.imgur.com/F8P9AzA.png)
 <em>Currently, the only working options are Sleeper and PPR</em>
 ## Installation
 
