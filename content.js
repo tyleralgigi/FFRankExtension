@@ -961,20 +961,38 @@ function modifyParagraphBackground() {
   }
   
 
-function modifyHeader(){
-  const innerScrollContainer =  document.querySelectorAll('div[class="header"]');
-  const adpDivs = innerScrollContainer[2].querySelectorAll('.adp.col-sml');
-  
-  var divHeader = document.createElement("div");
-  divHeader.textContent = "vFP";
-  divHeader.className = "adp col-sml new";
+  function modifyHeader() {
+    // Select all elements with class "header" (finds the header row)
+    const headerRows = document.querySelectorAll('div.header');
 
-  var divHeader1 = document.createElement("div");
-  divHeader1.className = "adp col-sml new";
+    if (headerRows.length < 1) {
+        console.error("Header row not found.");
+        return;
+    }
 
-  adpDivs[1].parentNode.insertBefore(divHeader, adpDivs[1]);
-  adpDivs[0].parentNode.insertBefore(divHeader1, adpDivs[0]);
-};
+    const headerRow = headerRows[0]; // Assuming the first 'header' div is the correct one
+    const existingHeaders = headerRow.querySelectorAll('.adp.col-sml'); // Find all existing headers
+
+    // Check if header already exists to prevent duplication
+    if (headerRow.querySelector('.adp.col-sml.new')) {
+        console.log("vFP header already added.");
+        return;
+    }
+
+    // Create the new header column
+    let newHeader = document.createElement("div");
+    newHeader.textContent = "vFP";
+    newHeader.className = "adp col-sml new"; // Apply necessary classes
+
+    // Determine correct position (insert after ADP)
+    if (existingHeaders.length > 1) {
+        existingHeaders[1].parentNode.insertBefore(newHeader, existingHeaders[1].nextSibling);
+    } else {
+        headerRow.appendChild(newHeader); // Fallback in case index is incorrect
+    }
+
+    console.log("vFP header successfully added.");
+}
 
 function contentChanged() {
   modifyParagraphBackground()
