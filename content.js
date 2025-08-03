@@ -1,896 +1,1408 @@
 // content.js
 const data = [
   {
-    "Name": "Justin Jefferson",
-    "SleepvFP": "0.00"
-  },
-  {
-    "Name": "Christian McCaffrey",
-    "SleepvFP": "-0.33"
-  },
-  {
     "Name": "Ja'Marr Chase",
-    "SleepvFP": "0.50"
-  },
-  {
-    "Name": "Austin Ekeler",
-    "SleepvFP": "-0.43"
-  },
-  {
-    "Name": "Travis Kelce",
-    "SleepvFP": "-0.17"
-  },
-  {
-    "Name": "Cooper Kupp",
-    "SleepvFP": "0.50"
-  },
-  {
-    "Name": "Tyreek Hill",
-    "SleepvFP": "0.40"
+    "SleepervFP": 0
   },
   {
     "Name": "Bijan Robinson",
-    "SleepvFP": "-0.43"
-  },
-  {
-    "Name": "Stefon Diggs",
-    "SleepvFP": "0.13"
+    "SleepervFP": -2
   },
   {
     "Name": "Saquon Barkley",
-    "SleepvFP": "0.00"
+    "SleepervFP": 1
   },
   {
-    "Name": "Jonathan Taylor",
-    "SleepvFP": "-0.31"
-  },
-  {
-    "Name": "CeeDee Lamb",
-    "SleepvFP": "0.33"
-  },
-  {
-    "Name": "Patrick Mahomes",
-    "SleepvFP": "-0.48"
-  },
-  {
-    "Name": "A.J. Brown",
-    "SleepvFP": "0.27"
-  },
-  {
-    "Name": "Davante Adams",
-    "SleepvFP": "0.25"
-  },
-  {
-    "Name": "Nick Chubb",
-    "SleepvFP": "-0.16"
-  },
-  {
-    "Name": "Amon-Ra St. Brown",
-    "SleepvFP": "0.31"
-  },
-  {
-    "Name": "Derrick Henry",
-    "SleepvFP": "-0.22"
-  },
-  {
-    "Name": "Garrett Wilson",
-    "SleepvFP": "0.27"
-  },
-  {
-    "Name": "Jaylen Waddle",
-    "SleepvFP": "0.11"
-  },
-  {
-    "Name": "Josh Jacobs",
-    "SleepvFP": "0.05"
-  },
-  {
-    "Name": "Josh Allen",
-    "SleepvFP": "-0.21"
-  },
-  {
-    "Name": "Jalen Hurts",
-    "SleepvFP": "-0.12"
-  },
-  {
-    "Name": "Tony Pollard",
-    "SleepvFP": "0.41"
-  },
-  {
-    "Name": "Mark Andrews",
-    "SleepvFP": "-0.14"
-  },
-  {
-    "Name": "Breece Hall",
-    "SleepvFP": "-0.19"
-  },
-  {
-    "Name": "Rhamondre Stevenson",
-    "SleepvFP": "0.00"
-  },
-  {
-    "Name": "Chris Olave",
-    "SleepvFP": "0.33"
-  },
-  {
-    "Name": "Tee Higgins",
-    "SleepvFP": "0.21"
-  },
-  {
-    "Name": "Najee Harris",
-    "SleepvFP": "-0.09"
-  },
-  {
-    "Name": "DeVonta Smith",
-    "SleepvFP": "0.41"
-  },
-  {
-    "Name": "Travis Etienne",
-    "SleepvFP": "-0.24"
-  },
-  {
-    "Name": "DK Metcalf",
-    "SleepvFP": "0.10"
-  },
-  {
-    "Name": "Joe Burrow",
-    "SleepvFP": "-0.15"
-  },
-  {
-    "Name": "Lamar Jackson",
-    "SleepvFP": "-0.10"
+    "Name": "Justin Jefferson",
+    "SleepervFP": 1
   },
   {
     "Name": "Jahmyr Gibbs",
-    "SleepvFP": "-0.16"
+    "SleepervFP": 0
   },
   {
-    "Name": "Kenneth Walker",
-    "SleepvFP": "-0.27"
+    "Name": "CeeDee Lamb",
+    "SleepervFP": 0
   },
   {
-    "Name": "Deebo Samuel",
-    "SleepvFP": "0.06"
+    "Name": "Malik Nabers",
+    "SleepervFP": -2
   },
   {
-    "Name": "Keenan Allen",
-    "SleepvFP": "0.26"
+    "Name": "Puka Nacua",
+    "SleepervFP": 0
   },
   {
-    "Name": "Aaron Jones",
-    "SleepvFP": "0.14"
+    "Name": "Christian McCaffrey",
+    "SleepervFP": -8
   },
   {
-    "Name": "T.J. Hockenson",
-    "SleepvFP": "-0.23"
+    "Name": "Amon-Ra St. Brown",
+    "SleepervFP": 3
   },
   {
-    "Name": "Joe Mixon",
-    "SleepvFP": "0.11"
+    "Name": "Ashton Jeanty",
+    "SleepervFP": -3
   },
   {
-    "Name": "Calvin Ridley",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "Amari Cooper",
-    "SleepvFP": "0.29"
-  },
-  {
-    "Name": "Justin Fields",
-    "SleepvFP": "-0.17"
-  },
-  {
-    "Name": "George Kittle",
-    "SleepvFP": "-0.23"
-  },
-  {
-    "Name": "DeAndre Hopkins",
-    "SleepvFP": "0.07"
-  },
-  {
-    "Name": "Justin Herbert",
-    "SleepvFP": "-0.14"
-  },
-  {
-    "Name": "Terry McLaurin",
-    "SleepvFP": "0.09"
-  },
-  {
-    "Name": "J.K. Dobbins",
-    "SleepvFP": "-0.21"
-  },
-  {
-    "Name": "Dameon Pierce",
-    "SleepvFP": "-0.26"
-  },
-  {
-    "Name": "DJ Moore",
-    "SleepvFP": "0.11"
-  },
-  {
-    "Name": "Miles Sanders",
-    "SleepvFP": "0.02"
-  },
-  {
-    "Name": "Drake London",
-    "SleepvFP": "0.32"
-  },
-  {
-    "Name": "Jerry Jeudy",
-    "SleepvFP": "0.20"
-  },
-  {
-    "Name": "Christian Watson",
-    "SleepvFP": "0.14"
-  },
-  {
-    "Name": "Chris Godwin",
-    "SleepvFP": "0.54"
-  },
-  {
-    "Name": "Trevor Lawrence",
-    "SleepvFP": "-0.11"
-  },
-  {
-    "Name": "Kyle Pitts",
-    "SleepvFP": "-0.19"
-  },
-  {
-    "Name": "D'Andre Swift",
-    "SleepvFP": "-0.22"
-  },
-  {
-    "Name": "Alexander Mattison",
-    "SleepvFP": "-0.15"
-  },
-  {
-    "Name": "Dalvin Cook",
-    "SleepvFP": "-0.47"
-  },
-  {
-    "Name": "Dallas Goedert",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "Cam Akers",
-    "SleepvFP": "-0.03"
-  },
-  {
-    "Name": "James Conner",
-    "SleepvFP": "-0.03"
-  },
-  {
-    "Name": "Michael Pittman",
-    "SleepvFP": "0.20"
-  },
-  {
-    "Name": "Darren Waller",
-    "SleepvFP": "-0.26"
-  },
-  {
-    "Name": "Marquise Brown",
-    "SleepvFP": "0.11"
-  },
-  {
-    "Name": "Brandon Aiyuk",
-    "SleepvFP": "0.11"
-  },
-  {
-    "Name": "Mike Williams",
-    "SleepvFP": "0.21"
-  },
-  {
-    "Name": "Tyler Lockett",
-    "SleepvFP": "0.42"
-  },
-  {
-    "Name": "Rachaad White",
-    "SleepvFP": "0.06"
-  },
-  {
-    "Name": "Alvin Kamara",
-    "SleepvFP": "-0.14"
-  },
-  {
-    "Name": "Christian Kirk",
-    "SleepvFP": "0.30"
-  },
-  {
-    "Name": "Isiah Pacheco",
-    "SleepvFP": "-0.09"
-  },
-  {
-    "Name": "Mike Evans",
-    "SleepvFP": "0.19"
-  },
-  {
-    "Name": "Javonte Williams",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "Diontae Johnson",
-    "SleepvFP": "0.32"
-  },
-  {
-    "Name": "Jaxon Smith-Njigba",
-    "SleepvFP": "0.04"
-  },
-  {
-    "Name": "David Montgomery",
-    "SleepvFP": "-0.01"
-  },
-  {
-    "Name": "George Pickens",
-    "SleepvFP": "0.09"
-  },
-  {
-    "Name": "Treylon Burks",
-    "SleepvFP": "0.09"
-  },
-  {
-    "Name": "Jordan Addison",
-    "SleepvFP": "0.04"
-  },
-  {
-    "Name": "Jahan Dotson",
-    "SleepvFP": "0.18"
-  },
-  {
-    "Name": "Pat Freiermuth",
-    "SleepvFP": "-0.09"
-  },
-  {
-    "Name": "Dak Prescott",
-    "SleepvFP": "-0.05"
-  },
-  {
-    "Name": "Evan Engram",
-    "SleepvFP": "-0.08"
-  },
-  {
-    "Name": "James Cook",
-    "SleepvFP": "-0.04"
-  },
-  {
-    "Name": "Deshaun Watson",
-    "SleepvFP": "0.07"
-  },
-  {
-    "Name": "AJ Dillon",
-    "SleepvFP": "-0.12"
-  },
-  {
-    "Name": "Kadarius Toney",
-    "SleepvFP": "0.05"
-  },
-  {
-    "Name": "David Njoku",
-    "SleepvFP": "-0.16"
-  },
-  {
-    "Name": "Antonio Gibson",
-    "SleepvFP": "-0.04"
-  },
-  {
-    "Name": "Brandin Cooks",
-    "SleepvFP": "0.12"
-  },
-  {
-    "Name": "Tua Tagovailoa",
-    "SleepvFP": "-0.08"
-  },
-  {
-    "Name": "Quentin Johnston",
-    "SleepvFP": "0.02"
-  },
-  {
-    "Name": "Michael Thomas",
-    "SleepvFP": "-0.04"
-  },
-  {
-    "Name": "JuJu Smith-Schuster",
-    "SleepvFP": "0.26"
-  },
-  {
-    "Name": "Brian Robinson",
-    "SleepvFP": "-0.01"
-  },
-  {
-    "Name": "Gabe Davis",
-    "SleepvFP": "0.14"
-  },
-  {
-    "Name": "Jamaal Williams",
-    "SleepvFP": "-0.09"
-  },
-  {
-    "Name": "Rashaad Penny",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "Anthony Richardson",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "Samaje Perine",
-    "SleepvFP": "-0.18"
-  },
-  {
-    "Name": "Zach Charbonnet",
-    "SleepvFP": "-0.15"
-  },
-  {
-    "Name": "Zay Flowers",
-    "SleepvFP": "0.07"
-  },
-  {
-    "Name": "Dalton Schultz",
-    "SleepvFP": "-0.18"
-  },
-  {
-    "Name": "Khalil Herbert",
-    "SleepvFP": "-0.08"
-  },
-  {
-    "Name": "Kirk Cousins",
-    "SleepvFP": "0.05"
-  },
-  {
-    "Name": "Courtland Sutton",
-    "SleepvFP": "0.39"
-  },
-  {
-    "Name": "Rashod Bateman",
-    "SleepvFP": "0.13"
-  },
-  {
-    "Name": "Elijah Moore",
-    "SleepvFP": "0.07"
-  },
-  {
-    "Name": "Aaron Rodgers",
-    "SleepvFP": "-0.08"
-  },
-  {
-    "Name": "De'Von Achane",
-    "SleepvFP": "-0.17"
-  },
-  {
-    "Name": "Odell Beckham",
-    "SleepvFP": "-0.06"
-  },
-  {
-    "Name": "Jameson Williams",
-    "SleepvFP": "-0.03"
-  },
-  {
-    "Name": "Damien Harris",
-    "SleepvFP": "0.01"
-  },
-  {
-    "Name": "Chigoziem Okonkwo",
-    "SleepvFP": "-0.13"
-  },
-  {
-    "Name": "Cole Kmet",
-    "SleepvFP": "-0.17"
-  },
-  {
-    "Name": "Allen Lazard",
-    "SleepvFP": "0.13"
-  },
-  {
-    "Name": "Dalton Kincaid",
-    "SleepvFP": "-0.27"
-  },
-  {
-    "Name": "Jerick McKinnon",
-    "SleepvFP": "0.02"
-  },
-  {
-    "Name": "Geno Smith",
-    "SleepvFP": "0.12"
-  },
-  {
-    "Name": "Daniel Jones",
-    "SleepvFP": "0.29"
-  },
-  {
-    "Name": "Elijah Mitchell",
-    "SleepvFP": "-0.02"
-  },
-  {
-    "Name": "Adam Thielen",
-    "SleepvFP": "-0.05"
-  },
-  {
-    "Name": "Jakobi Meyers",
-    "SleepvFP": "0.43"
-  },
-  {
-    "Name": "Greg Dulcich",
-    "SleepvFP": "-0.03"
-  },
-  {
-    "Name": "Jared Goff",
-    "SleepvFP": "0.02"
-  },
-  {
-    "Name": "Tyler Allgeier",
-    "SleepvFP": "-0.06"
-  },
-  {
-    "Name": "Rondale Moore",
-    "SleepvFP": "0.17"
-  },
-  {
-    "Name": "Tyler Higbee",
-    "SleepvFP": "0.01"
-  },
-  {
-    "Name": "Darnell Mooney",
-    "SleepvFP": "0.17"
-  },
-  {
-    "Name": "Tyler Boyd",
-    "SleepvFP": "0.11"
-  },
-  {
-    "Name": "Russell Wilson",
-    "SleepvFP": "0.08"
-  },
-  {
-    "Name": "Devin Singletary",
-    "SleepvFP": "-0.01"
-  },
-  {
-    "Name": "Jonathan Mingo",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "D'Onta Foreman",
-    "SleepvFP": "-0.11"
-  },
-  {
-    "Name": "Skyy Moore",
-    "SleepvFP": "0.08"
-  },
-  {
-    "Name": "Kendre Miller",
-    "SleepvFP": "-0.11"
-  },
-  {
-    "Name": "Sam LaPorta",
-    "SleepvFP": "-0.19"
-  },
-  {
-    "Name": "Rashee Rice",
-    "SleepvFP": "-0.26"
-  },
-  {
-    "Name": "Bryce Young",
-    "SleepvFP": "-0.12"
-  },
-  {
-    "Name": "Romeo Doubs",
-    "SleepvFP": "0.07"
-  },
-  {
-    "Name": "Gerald Everett",
-    "SleepvFP": "-0.04"
-  },
-  {
-    "Name": "Ezekiel Elliott",
-    "SleepvFP": "-0.29"
-  },
-  {
-    "Name": "Roschon Johnson",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "Kyler Murray",
-    "SleepvFP": "-0.18"
-  },
-  {
-    "Name": "Tank Bigsby",
-    "SleepvFP": "-0.13"
-  },
-  {
-    "Name": "Raheem Mostert",
-    "SleepvFP": "0.01"
+    "Name": "Derrick Henry",
+    "SleepervFP": 2
   },
   {
     "Name": "Nico Collins",
-    "SleepvFP": "0.40"
+    "SleepervFP": 2
   },
   {
-    "Name": "Zay Jones",
-    "SleepvFP": "0.42"
+    "Name": "De'Von Achane",
+    "SleepervFP": -1
   },
   {
-    "Name": "Michael Mayer",
-    "SleepvFP": "-0.29"
+    "Name": "Brian Thomas",
+    "SleepervFP": 3
   },
   {
-    "Name": "Jaylen Warren",
-    "SleepvFP": "0.11"
+    "Name": "Brock Bowers",
+    "SleepervFP": 3
   },
   {
-    "Name": "Derek Carr",
-    "SleepvFP": "0.14"
+    "Name": "Drake London",
+    "SleepervFP": 1
   },
   {
-    "Name": "Michael Gallup",
-    "SleepvFP": "0.16"
+    "Name": "A.J. Brown",
+    "SleepervFP": 0
   },
   {
-    "Name": "Jordan Love",
-    "SleepvFP": "0.06"
+    "Name": "Jonathan Taylor",
+    "SleepervFP": -7
   },
   {
-    "Name": "Irv Smith",
-    "SleepvFP": "-0.03"
+    "Name": "Josh Jacobs",
+    "SleepervFP": -2
   },
   {
-    "Name": "Jeff Wilson",
-    "SleepvFP": "0.20"
+    "Name": "Bucky Irving",
+    "SleepervFP": 2
   },
   {
-    "Name": "Juwan Johnson",
-    "SleepvFP": "0.07"
+    "Name": "Ladd McConkey",
+    "SleepervFP": 1
   },
   {
-    "Name": "Matthew Stafford",
-    "SleepvFP": "0.23"
+    "Name": "Josh Allen",
+    "SleepervFP": 3
   },
   {
-    "Name": "Jalin Hyatt",
-    "SleepvFP": "-0.06"
-  },
-  {
-    "Name": "DJ Chark",
-    "SleepvFP": "0.31"
-  },
-  {
-    "Name": "Rashid Shaheed",
-    "SleepvFP": "0.14"
-  },
-  {
-    "Name": "C.J. Stroud",
-    "SleepvFP": "-0.15"
-  },
-  {
-    "Name": "Dawson Knox",
-    "SleepvFP": "-0.10"
-  },
-  {
-    "Name": "Jerome Ford",
-    "SleepvFP": "-0.04"
-  },
-  {
-    "Name": "Chase Brown",
-    "SleepvFP": "-0.13"
-  },
-  {
-    "Name": "K.J. Osborn",
-    "SleepvFP": "0.27"
-  },
-  {
-    "Name": "Tyjae Spears",
-    "SleepvFP": "-0.13"
-  },
-  {
-    "Name": "Mike Gesicki",
-    "SleepvFP": "0.13"
-  },
-  {
-    "Name": "Jayden Reed",
-    "SleepvFP": "0.10"
-  },
-  {
-    "Name": "Clyde Edwards-Helaire",
-    "SleepvFP": "-0.09"
-  },
-  {
-    "Name": "Kenny Pickett",
-    "SleepvFP": "0.19"
-  },
-  {
-    "Name": "John Metchie",
-    "SleepvFP": "0.04"
-  },
-  {
-    "Name": "Alec Pierce",
-    "SleepvFP": "0.27"
-  },
-  {
-    "Name": "Donovan Peoples-Jones",
-    "SleepvFP": "0.36"
-  },
-  {
-    "Name": "Chuba Hubbard",
-    "SleepvFP": "0.12"
-  },
-  {
-    "Name": "Leonard Fournette",
-    "SleepvFP": "-0.09"
-  },
-  {
-    "Name": "Hunter Renfrow",
-    "SleepvFP": "0.31"
-  },
-  {
-    "Name": "Zach Ertz",
-    "SleepvFP": "-0.11"
-  },
-  {
-    "Name": "Kareem Hunt",
-    "SleepvFP": "-0.11"
-  },
-  {
-    "Name": "Van Jefferson",
-    "SleepvFP": "0.12"
-  },
-  {
-    "Name": "Brock Purdy",
-    "SleepvFP": "0.05"
-  },
-  {
-    "Name": "Parris Campbell",
-    "SleepvFP": "0.15"
-  },
-  {
-    "Name": "Hayden Hurst",
-    "SleepvFP": "0.00"
-  },
-  {
-    "Name": "Curtis Samuel",
-    "SleepvFP": "0.33"
-  },
-  {
-    "Name": "Wan'Dale Robinson",
-    "SleepvFP": "0.24"
-  },
-  {
-    "Name": "Marvin Mims",
-    "SleepvFP": "-0.01"
-  },
-  {
-    "Name": "Gus Edwards",
-    "SleepvFP": "0.04"
-  },
-  {
-    "Name": "Cordarrelle Patterson",
-    "SleepvFP": "0.08"
-  },
-  {
-    "Name": "Isaiah Hodgins",
-    "SleepvFP": "0.33"
+    "Name": "Lamar Jackson",
+    "SleepervFP": 0
   },
   {
     "Name": "Trey McBride",
-    "SleepvFP": "0.27"
+    "SleepervFP": 2
   },
   {
-    "Name": "Sam Howell",
-    "SleepvFP": "0.13"
+    "Name": "Chase Brown",
+    "SleepervFP": -7
   },
   {
-    "Name": "Kenneth Gainwell",
-    "SleepvFP": "0.41"
+    "Name": "Tyreek Hill",
+    "SleepervFP": 0
   },
   {
-    "Name": "Robert Woods",
-    "SleepvFP": "0.15"
+    "Name": "Tee Higgins",
+    "SleepervFP": 0
   },
   {
-    "Name": "Marquez Valdes-Scantling",
-    "SleepvFP": "0.32"
+    "Name": "Kyren Williams",
+    "SleepervFP": -2
   },
   {
-    "Name": "Josh Downs",
-    "SleepvFP": "0.13"
+    "Name": "Garrett Wilson",
+    "SleepervFP": 0
   },
   {
-    "Name": "Tim Patrick",
-    "SleepvFP": "0.15"
+    "Name": "Jayden Daniels",
+    "SleepervFP": 2
   },
   {
-    "Name": "Desmond Ridder",
-    "SleepvFP": "0.06"
+    "Name": "Jaxon Smith-Njigba",
+    "SleepervFP": 7
   },
   {
-    "Name": "Chase Claypool",
-    "SleepvFP": "0.29"
+    "Name": "Breece Hall",
+    "SleepervFP": -1
   },
   {
-    "Name": "Pierre Strong",
-    "SleepvFP": "0.05"
+    "Name": "Davante Adams",
+    "SleepervFP": -5
   },
   {
-    "Name": "Mac Jones",
-    "SleepvFP": "0.16"
+    "Name": "James Cook",
+    "SleepervFP": -2
   },
   {
-    "Name": "Noah Fant",
-    "SleepvFP": "0.14"
+    "Name": "Marvin Harrison",
+    "SleepervFP": 1
   },
   {
-    "Name": "Jimmy Garoppolo",
-    "SleepvFP": "0.25"
+    "Name": "George Kittle",
+    "SleepervFP": -3
   },
   {
-    "Name": "Ryan Tannehill",
-    "SleepvFP": "0.29"
+    "Name": "Terry McLaurin",
+    "SleepervFP": 6
   },
   {
-    "Name": "Tyquan Thornton",
-    "SleepvFP": "0.36"
+    "Name": "Mike Evans",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Jalen Hurts",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Omarion Hampton",
+    "SleepervFP": -5
+  },
+  {
+    "Name": "Joe Burrow",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Kenneth Walker",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "Alvin Kamara",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "DJ Moore",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Rashee Rice",
+    "SleepervFP": 4
+  },
+  {
+    "Name": "Chuba Hubbard",
+    "SleepervFP": 0
+  },
+  {
+    "Name": "DK Metcalf",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "Courtland Sutton",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "James Conner",
+    "SleepervFP": -4
+  },
+  {
+    "Name": "Xavier Worthy",
+    "SleepervFP": -5
+  },
+  {
+    "Name": "Sam LaPorta",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Jameson Williams",
+    "SleepervFP": -5
+  },
+  {
+    "Name": "DeVonta Smith",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Zay Flowers",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Tetairoa McMillan",
+    "SleepervFP": -7
+  },
+  {
+    "Name": "Patrick Mahomes",
+    "SleepervFP": -2
+  },
+  {
+    "Name": "Joe Mixon",
+    "SleepervFP": 10
+  },
+  {
+    "Name": "George Pickens",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "David Montgomery",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "D'Andre Swift",
+    "SleepervFP": -18
+  },
+  {
+    "Name": "RJ Harvey",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "TreVeyon Henderson",
+    "SleepervFP": -10
+  },
+  {
+    "Name": "Calvin Ridley",
+    "SleepervFP": -14
+  },
+  {
+    "Name": "T.J. Hockenson",
+    "SleepervFP": 10
+  },
+  {
+    "Name": "Travis Hunter",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "Jaylen Waddle",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Travis Kelce",
+    "SleepervFP": -6
+  },
+  {
+    "Name": "Baker Mayfield",
+    "SleepervFP": 0
+  },
+  {
+    "Name": "Kaleb Johnson",
+    "SleepervFP": -16
+  },
+  {
+    "Name": "Isiah Pacheco",
+    "SleepervFP": 6
+  },
+  {
+    "Name": "Aaron Jones",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Jerry Jeudy",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Chris Olave",
+    "SleepervFP": 12
+  },
+  {
+    "Name": "Rome Odunze",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "Tony Pollard",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Bo Nix",
+    "SleepervFP": -4
+  },
+  {
+    "Name": "Jordan Addison",
+    "SleepervFP": 12
+  },
+  {
+    "Name": "Chris Godwin",
+    "SleepervFP": 11
+  },
+  {
+    "Name": "Mark Andrews",
+    "SleepervFP": -3
+  },
+  {
+    "Name": "Deebo Samuel",
+    "SleepervFP": -7
+  },
+  {
+    "Name": "Jauan Jennings",
+    "SleepervFP": -15
+  },
+  {
+    "Name": "Brian Robinson",
+    "SleepervFP": -2
+  },
+  {
+    "Name": "Stefon Diggs",
+    "SleepervFP": -12
+  },
+  {
+    "Name": "Evan Engram",
+    "SleepervFP": -8
+  },
+  {
+    "Name": "Jakobi Meyers",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Kyler Murray",
+    "SleepervFP": -7
   },
   {
     "Name": "Khalil Shakir",
-    "SleepvFP": "0.18"
+    "SleepervFP": 6
   },
   {
-    "Name": "Michael Carter",
-    "SleepvFP": "0.33"
+    "Name": "Cooper Kupp",
+    "SleepervFP": -2
   },
   {
-    "Name": "Darius Slayton",
-    "SleepvFP": "0.42"
+    "Name": "Tyrone Tracy",
+    "SleepervFP": 10
   },
   {
-    "Name": "Mecole Hardman",
-    "SleepvFP": "0.34"
+    "Name": "Ricky Pearsall",
+    "SleepervFP": -9
   },
   {
-    "Name": "Allen Robinson",
-    "SleepvFP": "0.29"
+    "Name": "Jaylen Warren",
+    "SleepervFP": 3
   },
   {
-    "Name": "DeVante Parker",
-    "SleepvFP": "0.45"
+    "Name": "David Njoku",
+    "SleepervFP": -6
   },
   {
-    "Name": "Terrace Marshall",
-    "SleepvFP": "0.35"
+    "Name": "Jayden Reed",
+    "SleepervFP": -4
+  },
+  {
+    "Name": "Brock Purdy",
+    "SleepervFP": -13
+  },
+  {
+    "Name": "Travis Etienne ",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Matthew Golden",
+    "SleepervFP": -5
+  },
+  {
+    "Name": "Justin Fields",
+    "SleepervFP": -33
+  },
+  {
+    "Name": "Jared Goff",
+    "SleepervFP": 7
+  },
+  {
+    "Name": "Cam Skattebo",
+    "SleepervFP": -5
+  },
+  {
+    "Name": "Quinshon Judkins",
+    "SleepervFP": 29
+  },
+  {
+    "Name": "Dak Prescott",
+    "SleepervFP": -20
+  },
+  {
+    "Name": "Jordan Mason",
+    "SleepervFP": -25
+  },
+  {
+    "Name": "Caleb Williams",
+    "SleepervFP": -7
+  },
+  {
+    "Name": "Josh Downs",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Emeka Egbuka",
+    "SleepervFP": -9
+  },
+  {
+    "Name": "Tyler Warren",
+    "SleepervFP": 6
+  },
+  {
+    "Name": "Justin Herbert",
+    "SleepervFP": 5
+  },
+  {
+    "Name": "Tucker Kraft",
+    "SleepervFP": -10
+  },
+  {
+    "Name": "Javonte Williams",
+    "SleepervFP": 4
+  },
+  {
+    "Name": "J.K. Dobbins",
+    "SleepervFP": -36
+  },
+  {
+    "Name": "Zach Charbonnet",
+    "SleepervFP": -2
+  },
+  {
+    "Name": "Rhamondre Stevenson",
+    "SleepervFP": 6
+  },
+  {
+    "Name": "Michael Pittman",
+    "SleepervFP": 5
+  },
+  {
+    "Name": "Najee Harris",
+    "SleepervFP": 28
+  },
+  {
+    "Name": "Brandon Aiyuk",
+    "SleepervFP": 26
+  },
+  {
+    "Name": "Keon Coleman",
+    "SleepervFP": -3
+  },
+  {
+    "Name": "Darnell Mooney",
+    "SleepervFP": 8
+  },
+  {
+    "Name": "Colston Loveland",
+    "SleepervFP": 7
+  },
+  {
+    "Name": "Jordan Love",
+    "SleepervFP": 4
+  },
+  {
+    "Name": "Tyjae Spears",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Drake Maye",
+    "SleepervFP": -3
+  },
+  {
+    "Name": "Jayden Higgins",
+    "SleepervFP": -6
+  },
+  {
+    "Name": "Dalton Kincaid",
+    "SleepervFP": 11
+  },
+  {
+    "Name": "J.J. McCarthy",
+    "SleepervFP": -14
+  },
+  {
+    "Name": "Jonnu Smith",
+    "SleepervFP": 49
+  },
+  {
+    "Name": "C.J. Stroud",
+    "SleepervFP": 6
+  },
+  {
+    "Name": "Dallas Goedert",
+    "SleepervFP": 5
+  },
+  {
+    "Name": "Rachaad White",
+    "SleepervFP": 5
+  },
+  {
+    "Name": "Tre Harris",
+    "SleepervFP": 0
+  },
+  {
+    "Name": "Jake Ferguson",
+    "SleepervFP": 14
+  },
+  {
+    "Name": "Rashid Shaheed",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "Jaydon Blue",
+    "SleepervFP": -1
+  },
+  {
+    "Name": "Marquise Brown",
+    "SleepervFP": -14
+  },
+  {
+    "Name": "Tank Bigsby",
+    "SleepervFP": 9
+  },
+  {
+    "Name": "Isaac Guerendo",
+    "SleepervFP": -7
+  },
+  {
+    "Name": "Bhayshul Tuten",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Kyle Pitts",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Luther Burden III",
+    "SleepervFP": 7
+  },
+  {
+    "Name": "Austin Ekeler",
+    "SleepervFP": -5
+  },
+  {
+    "Name": "Rashod Bateman",
+    "SleepervFP": -16
+  },
+  {
+    "Name": "Trevor Lawrence",
+    "SleepervFP": -4
+  },
+  {
+    "Name": "Christian Kirk",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Marvin Mims ",
+    "SleepervFP": 8
+  },
+  {
+    "Name": "Denver Broncos",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Trey Benson",
+    "SleepervFP": -6
+  },
+  {
+    "Name": "Ray Davis",
+    "SleepervFP": -2
+  },
+  {
+    "Name": "Michael Penix ",
+    "SleepervFP": -10
+  },
+  {
+    "Name": "Tua Tagovailoa",
+    "SleepervFP": -12
+  },
+  {
+    "Name": "Nick Chubb",
+    "SleepervFP": -23
+  },
+  {
+    "Name": "Isaiah Likely",
+    "SleepervFP": 0
+  },
+  {
+    "Name": "Matthew Stafford",
+    "SleepervFP": -7
+  },
+  {
+    "Name": "Tyler Allgeier",
+    "SleepervFP": -2
+  },
+  {
+    "Name": "Cam Ward",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Kyle Williams",
+    "SleepervFP": 17
+  },
+  {
+    "Name": "Bryce Young",
+    "SleepervFP": -10
+  },
+  {
+    "Name": "Philadelphia Eagles",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jerome Ford",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Dylan Sampson",
+    "SleepervFP": -9
+  },
+  {
+    "Name": "Adam Thielen",
+    "SleepervFP": 0
+  },
+  {
+    "Name": "Zach Ertz",
+    "SleepervFP": 11
   },
   {
     "Name": "Hunter Henry",
-    "SleepvFP": "0.17"
+    "SleepervFP": 8
   },
   {
-    "Name": "Joshua Kelley",
-    "SleepvFP": "0.25"
+    "Name": "Pittsburgh Steelers",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Baltimore Ravens",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jack Bech",
+    "SleepervFP": 24
+  },
+  {
+    "Name": "Jalen McMillan",
+    "SleepervFP": 24
+  },
+  {
+    "Name": "Houston Texans",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Xavier Legette",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Jaylen Wright",
+    "SleepervFP": -3
+  },
+  {
+    "Name": "Minnesota Vikings",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Brandon Aubrey",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Quentin Johnston",
+    "SleepervFP": 5
+  },
+  {
+    "Name": "Geno Smith",
+    "SleepervFP": -11
+  },
+  {
+    "Name": "Cedric Tillman",
+    "SleepervFP": -9
+  },
+  {
+    "Name": "Braelon Allen",
+    "SleepervFP": 5
+  },
+  {
+    "Name": "Rico Dowdle",
+    "SleepervFP": 49
+  },
+  {
+    "Name": "Sam Darnold",
+    "SleepervFP": -10
+  },
+  {
+    "Name": "Buffalo Bills",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Cameron Dicker",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Romeo Doubs",
+    "SleepervFP": 0
+  },
+  {
+    "Name": "Mike Gesicki",
+    "SleepervFP": 17
+  },
+  {
+    "Name": "DeAndre Hopkins",
+    "SleepervFP": 8
+  },
+  {
+    "Name": "Brenton Strange",
+    "SleepervFP": 21
+  },
+  {
+    "Name": "Wan'Dale Robinson",
+    "SleepervFP": 21
+  },
+  {
+    "Name": "Cade Otton",
+    "SleepervFP": 14
+  },
+  {
+    "Name": "Jake Bates",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Roschon Johnson",
+    "SleepervFP": 9
+  },
+  {
+    "Name": "Kareem Hunt",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Chris Boswell",
+    "SleepervFP": "-"
   },
   {
     "Name": "Joshua Palmer",
-    "SleepvFP": "0.55"
+    "SleepervFP": 13
+  },
+  {
+    "Name": "Anthony Richardson",
+    "SleepervFP": 12
+  },
+  {
+    "Name": "DeMario Douglas",
+    "SleepervFP": 3
+  },
+  {
+    "Name": "Aaron Rodgers",
+    "SleepervFP": -5
+  },
+  {
+    "Name": "Ka'imi Fairbairn",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Pat Freiermuth",
+    "SleepervFP": 51
+  },
+  {
+    "Name": "Chig Okonkwo",
+    "SleepervFP": 0
+  },
+  {
+    "Name": "Kansas City Chiefs",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "San Francisco 49ers",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Justice Hill",
+    "SleepervFP": 4
+  },
+  {
+    "Name": "Chase McLaughlin",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Detroit Lions",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Pat Bryant",
+    "SleepervFP": 16
+  },
+  {
+    "Name": "Will Shipley",
+    "SleepervFP": 10
+  },
+  {
+    "Name": "Keenan Allen",
+    "SleepervFP": 29
+  },
+  {
+    "Name": "Mason Taylor",
+    "SleepervFP": 36
+  },
+  {
+    "Name": "Harrison Butker",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Wil Lutz",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Blake Corum",
+    "SleepervFP": 32
+  },
+  {
+    "Name": "Alec Pierce",
+    "SleepervFP": 19
+  },
+  {
+    "Name": "Jarquez Hunter",
+    "SleepervFP": 22
+  },
+  {
+    "Name": "MarShawn Lloyd",
+    "SleepervFP": 1
+  },
+  {
+    "Name": "Darren Waller",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Elijah Arroyo",
+    "SleepervFP": 2
+  },
+  {
+    "Name": "Jaylin Noel",
+    "SleepervFP": 22
+  },
+  {
+    "Name": "Brashard Smith",
+    "SleepervFP": 11
+  },
+  {
+    "Name": "Miles Sanders",
+    "SleepervFP": -13
+  },
+  {
+    "Name": "Jason Sanders",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Dallas Cowboys",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "DJ Giddens",
+    "SleepervFP": 20
+  },
+  {
+    "Name": "Jake Elliott",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Michael Wilson",
+    "SleepervFP": 15
+  },
+  {
+    "Name": "Chicago Bears",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Los Angeles Chargers",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "New England Patriots",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tyler Bass",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Dyami Brown",
+    "SleepervFP": 12
+  },
+  {
+    "Name": "Shedeur Sanders",
+    "SleepervFP": 24
+  },
+  {
+    "Name": "Dalton Schultz",
+    "SleepervFP": 37
+  },
+  {
+    "Name": "Russell Wilson",
+    "SleepervFP": 17
+  },
+  {
+    "Name": "Andrei Iosivas",
+    "SleepervFP": -10
+  },
+  {
+    "Name": "Los Angeles Rams",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Seattle Seahawks",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tampa Bay Buccaneers",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Woody Marks",
+    "SleepervFP": 9
+  },
+  {
+    "Name": "Darius Slayton",
+    "SleepervFP": 27
+  },
+  {
+    "Name": "Green Bay Packers",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Calvin Austin III",
+    "SleepervFP": 9
+  },
+  {
+    "Name": "Tyler Lockett",
+    "SleepervFP": 36
+  },
+  {
+    "Name": "Evan McPherson",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Devin Neal",
+    "SleepervFP": 59
+  },
+  {
+    "Name": "Dont'e Thornton ",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Matt Gay",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jalen Royals",
+    "SleepervFP": 43
+  },
+  {
+    "Name": "Cincinnati Bengals",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "New York Giants",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Arizona Cardinals",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tahj Brooks",
+    "SleepervFP": 12
+  },
+  {
+    "Name": "Cleveland Browns",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "New York Jets",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jacory Croskey-Merritt",
+    "SleepervFP": 20
+  },
+  {
+    "Name": "Juwan Johnson",
+    "SleepervFP": 25
+  },
+  {
+    "Name": "Brandon McManus",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Daniel Jones",
+    "SleepervFP": 22
+  },
+  {
+    "Name": "Younghoe Koo",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tyler Loop",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Kyle Monangai",
+    "SleepervFP": 37
+  },
+  {
+    "Name": "Washington Commanders",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Elic Ayomanor",
+    "SleepervFP": 51
+  },
+  {
+    "Name": "Jalen Coker",
+    "SleepervFP": 65
+  },
+  {
+    "Name": "Tyler Shough",
+    "SleepervFP": 40
+  },
+  {
+    "Name": "Jaxson Dart",
+    "SleepervFP": 45
+  },
+  {
+    "Name": "Theo Johnson",
+    "SleepervFP": 53
+  },
+  {
+    "Name": "Keaton Mitchell",
+    "SleepervFP": 25
+  },
+  {
+    "Name": "Will Reichard",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Ja'Tavion Sanders",
+    "SleepervFP": 60
+  },
+  {
+    "Name": "Daniel Carlson",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Dontayvion Wicks",
+    "SleepervFP": 46
+  },
+  {
+    "Name": "Amari Cooper",
+    "SleepervFP": 86
+  },
+  {
+    "Name": "Jaleel McLaughlin",
+    "SleepervFP": 51
+  },
+  {
+    "Name": "Jake Moody",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Joshua Karty",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Ray-Ray McCloud III",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Denzel Mims",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Zack Moss",
+    "SleepervFP": 33
+  },
+  {
+    "Name": "Raheem Mostert",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Roman Wilson",
+    "SleepervFP": 59
+  },
+  {
+    "Name": "Terrance Ferguson",
+    "SleepervFP": 80
+  },
+  {
+    "Name": "Elijah Mitchell",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Indianapolis Colts",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Miami Dolphins",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Cairo Santos",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Ollie Gordon II",
+    "SleepervFP": 59
+  },
+  {
+    "Name": "Cole Kmet",
+    "SleepervFP": 68
+  },
+  {
+    "Name": "Jason Myers",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tutu Atwell",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Diontae Johnson",
+    "SleepervFP": 59
+  },
+  {
+    "Name": "Adonai Mitchell",
+    "SleepervFP": 74
+  },
+  {
+    "Name": "Sean Tucker",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Harold Fannin ",
+    "SleepervFP": 67
+  },
+  {
+    "Name": "Noah Gray",
+    "SleepervFP": 58
+  },
+  {
+    "Name": "Keandre Lambert-Smith",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jalen Nailor",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Noah Brown",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tyler Higbee",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jordan James",
+    "SleepervFP": 94
+  },
+  {
+    "Name": "Kendre Miller",
+    "SleepervFP": 50
+  },
+  {
+    "Name": "Isaac TeSlaa",
+    "SleepervFP": 60
+  },
+  {
+    "Name": "Atlanta Falcons",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tyler Conklin",
+    "SleepervFP": 52
+  },
+  {
+    "Name": "Audric Estime",
+    "SleepervFP": 76
+  },
+  {
+    "Name": "Trevor Etienne",
+    "SleepervFP": 62
+  },
+  {
+    "Name": "Jalen Tolbert",
+    "SleepervFP": 53
+  },
+  {
+    "Name": "Las Vegas Raiders",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tank Dell",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Joe Flacco",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Troy Franklin",
+    "SleepervFP": 64
+  },
+  {
+    "Name": "Cam Little",
+    "SleepervFP": "-"
   },
   {
     "Name": "Josh Reynolds",
-    "SleepvFP": "0.23"
+    "SleepervFP": "-"
   },
   {
-    "Name": "Richie James",
-    "SleepvFP": "0.22"
+    "Name": "Justin Tucker",
+    "SleepervFP": "-"
   },
   {
-    "Name": "Mack Hollins",
-    "SleepvFP": "0.28"
+    "Name": "KaVontae Turpin",
+    "SleepervFP": "-"
   },
   {
-    "Name": "Chase Edmonds",
-    "SleepvFP": "0.27"
+    "Name": "Devaughn Vele",
+    "SleepervFP": "-"
   },
   {
-    "Name": "Corey Davis",
-    "SleepvFP": "0.38"
+    "Name": "Devontez Walker",
+    "SleepervFP": "-"
   },
   {
-    "Name": "Russell Gage",
-    "SleepvFP": "0.40"
+    "Name": "Malik Washington",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jordan Whittington",
+    "SleepervFP": 80
+  },
+  {
+    "Name": "Odell Beckham",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "A.J. Dillon",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Kenneth Gainwell",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Allen Lazard",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Xavier Restrepo",
+    "SleepervFP": 86
+  },
+  {
+    "Name": "Tyquan Thornton",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Carolina Panthers",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jacksonville Jaguars",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Andy Borregales",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jermaine Burton",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Kirk Cousins",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Noah Fant",
+    "SleepervFP": 78
+  },
+  {
+    "Name": "Oronde Gadsden",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Graham Gano",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Blake Grupe",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jimmy Horn ",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tory Horton",
+    "SleepervFP": 87
+  },
+  {
+    "Name": "Jalin Hyatt",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Tez Johnson",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Kyle Juszczyk",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jaylin Lane",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jalen Milroe",
+    "SleepervFP": 93
+  },
+  {
+    "Name": "Hunter Renfrow",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Ben Sinnott",
+    "SleepervFP": 102
+  },
+  {
+    "Name": "JuJu Smith-Schuster",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Christian Watson",
+    "SleepervFP": 95
+  },
+  {
+    "Name": "Olamide Zaccheaus",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "New Orleans Saints",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Kayshon Boutte",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Malachi Corley",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Isaiah Davis",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jahan Dotson",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Dillon Gabriel",
+    "SleepervFP": 97
+  },
+  {
+    "Name": "Taysom Hill",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Jude McAtamney",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "John Metchie III",
+    "SleepervFP": "-"
+  },
+  {
+    "Name": "Elijah Moore",
+    "SleepervFP": "-"
   }
 ];
 
@@ -909,39 +1421,36 @@ function modifyParagraphBackground() {
       divElement.appendChild(spanElement);
       divElement.className = "adp col-sml stat-cell new";
 
-      var playerName = child.querySelector('.name-wrapper').textContent;
-      var stringArray = playerName.split(/(\s+)/);
-      playerName = stringArray[0] + " " + stringArray[2].substring(0, stringArray[2].length-2);
-      
-      var obj = data.find(o => o.Name === playerName);
+      const nameWrapper = child.querySelector('.name-wrapper');
+      if (!nameWrapper) return;
 
+      const nameOnly = Array.from(nameWrapper.childNodes)
+        .filter(node => node.nodeType === Node.TEXT_NODE)
+        .map(node => node.textContent.trim())
+        .join('');
+      
+      var obj = data.find(o => o.Name === nameOnly);
 
       if(obj == undefined){
+        // console.log("Object not found for player: " + nameOnly);
         spanElement.textContent = "N/A";
-        
         
       }else{
         let resultRed = 255;
         let resultGreen = 255;
         let resultBlue = 255;
-        
-        
-        if(obj.SleepvFP == 0.00){
-          resultRed = 255;
-          resultGreen = 255;
-          resultBlue = 255;
-        }else if(obj.SleepvFP > 0.000000000001){
-          var temp = obj.SleepvFP  * (255);
+
+        if (obj.SleepervFP > 0) {
+          const temp = obj.SleepervFP * 50; // adjust scale if needed
           resultRed = 200 - temp;
           resultBlue = 200 - temp;
-        }else{
-          var temp = ((-1) * obj.SleepvFP  * (255));
+        } else if (obj.SleepervFP < 0) {
+          const temp = -obj.SleepervFP * 10;
           resultGreen = 200 - temp;
           resultBlue = 200 - temp;
-          
         }
 
-        spanElement.textContent = obj.SleepvFP;
+        spanElement.textContent = obj.SleepervFP;
         spanElement.style.color=`rgb(${resultRed},${resultGreen},${resultBlue})`;
         
       }
@@ -958,8 +1467,8 @@ function modifyParagraphBackground() {
 
     });
     
-  }
-  
+}
+
 function modifyHeader(retries = 5, delay = 500) {
   console.log("modifyHeader called");
 
