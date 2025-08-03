@@ -960,38 +960,82 @@ function modifyParagraphBackground() {
     
   }
   
+function modifyHeader(retries = 5, delay = 500) {
+  console.log("modifyHeader called");
 
-  function modifyHeader() {
-    // Select all elements with class "header" (finds the header row)
-    const headerRows = document.querySelectorAll('div.header');
+  // First header row (blank cell)
+  const headerRows1 = document.querySelector(
+    "#root > div:nth-child(1) > div.draft-layout-container > div.draftboard-page.theme-dark > div.bottom-container > div.bottom-panel-wrapper > div.rankings > div > div.body-container > div.header > div:nth-child(1)"
+  );
 
-    if (headerRows.length < 1) {
-        console.error("Header row not found.");
-        return;
-    }
-
-    const headerRow = headerRows[0]; // Assuming the first 'header' div is the correct one
-    const existingHeaders = headerRow.querySelectorAll('.adp.col-sml'); // Find all existing headers
-
-    // Check if header already exists to prevent duplication
-    if (headerRow.querySelector('.adp.col-sml.new')) {
-        console.log("vFP header already added.");
-        return;
-    }
-
-    // Create the new header column
-    let newHeader = document.createElement("div");
-    newHeader.textContent = "vFP";
-    newHeader.className = "adp col-sml new"; // Apply necessary classes
-
-    // Determine correct position (insert after ADP)
-    if (existingHeaders.length > 1) {
-        existingHeaders[1].parentNode.insertBefore(newHeader, existingHeaders[1].nextSibling);
+  // Retry if first header row is not found
+  if (!headerRows1) {
+    console.warn("Header row 1 not found. Retrying...");
+    if (retries > 0) {
+      setTimeout(() => modifyHeader(retries - 1, delay), delay);
     } else {
-        headerRow.appendChild(newHeader); // Fallback in case index is incorrect
+      console.error("Header row 1 still not found after retries.");
+    }
+    return;
+  }
+
+  // Insert blank header if not already added
+  if (!headerRows1.querySelector(".adp.col-sml.new")) {
+    const newHeaderBlank = document.createElement("div");
+    newHeaderBlank.className = "adp col-sml new";
+    const referenceNodeBlank = headerRows1.children[2];
+
+    if (referenceNodeBlank) {
+      headerRows1.insertBefore(newHeaderBlank, referenceNodeBlank);
+    } else {
+      headerRows1.appendChild(newHeaderBlank);
+    }
+
+    console.log("Blank header added.");
+  } else {
+    console.log("Blank header already added.");
+  }
+
+  // Second header row (with vFP text)
+  const headerRows2 = document.querySelector(
+    "#root > div:nth-child(1) > div.draft-layout-container > div.draftboard-page.theme-dark > div.bottom-container > div.bottom-panel-wrapper > div.rankings > div > div.body-container > div.header > div:nth-child(2)"
+  );
+
+  // Retry if second header row is not found
+  if (!headerRows2) {
+    console.warn("Header row 2 not found. Retrying...");
+    if (retries > 0) {
+      setTimeout(() => modifyHeader(retries - 1, delay), delay);
+    } else {
+      console.error("Header row 2 still not found after retries.");
+    }
+    return;
+  }
+
+  // Insert vFP header if not already added
+  if (!headerRows2.querySelector(".adp.col-sml.new")) {
+    const newHeader = document.createElement("div");
+    newHeader.textContent = "vFP";
+    newHeader.className = "adp col-sml new";
+
+    const insertAt = 2;
+    const referenceNode = headerRows2.children[insertAt];
+
+    if (referenceNode) {
+      headerRows2.insertBefore(newHeader, referenceNode);
+    } else {
+      headerRows2.appendChild(newHeader);
     }
 
     console.log("vFP header successfully added.");
+  } else {
+    console.log("vFP header already added.");
+  }
+}
+
+function handleSave() {
+  console.log("Save button clicked!");
+  
 }
 
 function contentChanged() {
@@ -1008,3 +1052,6 @@ window.addEventListener('load', function(){
   contentChanged();
 }, true);
 
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("saveBtn").addEventListener("click", handleSave);
+});
