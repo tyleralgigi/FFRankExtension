@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Covid-19 Stats- UK</title>
+    <title>Draft Ranking Adjustment</title>
     <meta charset="utf-8">
-    <meta name="description" content="A basic template for a Chrome Extension using Twitter Bootstrap 3">
-    <meta name="author" content="Elliot Hesp">
-    <link href="css/bootstrap.min.css" rel ="stylesheet" type="text/css">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <link href="custom.css" rel="stylesheet" media="screen">		
+    <meta name="description" content="A simple tool that adds a column to your draft board to identify players in your draft who are undervalued or overvalued compared to draft site rankings.">
+    <meta name="author" content="Your Name">
     
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="custom.css" rel="stylesheet" media="screen">
   </head>
+  
   <body>
-      <div class="container-fluid" style="width: 450px;">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="text-center">
-              Draft Ranking Adjustment
-            </h3>
-          </div>
+    <div class="container-fluid" style="width: 450px;">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">Draft Ranking Adjustment</h3>
         </div>
-        <div class="row justify-content-center flex-grow-1">
-          <div class="text-black">A simple tool that adds a column to your draft board to identify players in your draft who are undervalued or overvalued compared to draft site rankings.<br> <br>The values "compare FantasyPros ADP and Expert Consensus Rankings (ECR) to the draft room rankings of ESPN, Sleeper, and Yahoo". Please check out <a href="https://firstseedsports.com/abusing-draft-rankings-2023/?utm_source=reddit&utm_medium=referral" target="_blank">Abusing Draft Rankings</a> if you would like more imformation on the data.</div>
-          
-          <div class="btn-group spacingStyle" role="group" aria-label="First group" id="siteBtn">
-            <input type="radio" class="btn-check" name="siteBtn" id="btnSleeper" value="Sleeper" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="btnSleeper">Sleeper</label>
-          
-            <input type="radio" class="btn-check" name="siteBtn" id="btnESPN" value="ESPN" autocomplete="off" disabled>
-            <label class="btn btn-dark" for="btnESPN">ESPN</label>
-          
-            <input type="radio" class="btn-check" name="siteBtn" id="btnYahoo" value="Yahoo" autocomplete="off" disabled>
-            <label class="btn btn-dark" for="btnYahoo">Yahoo</label>
-          </div>
-
-          <div class="btn-group spacingStyle" role="group" aria-label="First group" id="fantasyStyleBtn">
-            <input type="radio" class="btn-check" name="fantasyStyleBtn" id="btnReDraft" value="ReDraft" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="btnReDraft">Re-Draft</label>
-
-            <input type="radio" class="btn-check" name="fantasyStyleBtn" id="btnDynasty" value="Dynasty" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnDynasty">Dynasty</label> 
-          </div>
-
-        
-        <div class="btn-group spacingStyle" role="group1" aria-label="Second group" id="typeBtn">
-            <input type="radio" class="btn-check" name="typeBtn" id="btnPPR" value="PPR" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="btnPPR">PPR</label>
-          
-            <input type="radio" class="btn-check" name="typeBtn" id="btnHalfPPR" value="HalfPPR" autocomplete="off" disabled>
-            <label class="btn btn-dark" for="btnHalfPPR">Half PPR</label>
-          
-            <input type="radio" class="btn-check" name="typeBtn" id="btnNonPPR" value="NonPPR" autocomplete="off" disabled>
-            <label class="btn btn-dark" for="btnNonPPR">Non PPR</label>
+      </div>
+      
+      <div class="row justify-content-center flex-grow-1">
+        <div class="text-black">
+          A simple tool that adds a column to your draft board to identify players in your draft who are undervalued or overvalued compared to draft site rankings.
+          <br><br>
+          <b>C-RK</b>= Composite Rank.<br>
+          <b>DIFF</b> = Difference between C-RK and Site Rank.<br>
+          <b>Tiers</b> are added 1-15 with different colors for easy visualization.<br>
         </div>
         
+        <!-- Site buttons -->
+        <div class="btn-group spacingStyle mt-3" role="group" aria-label="Site group" id="siteBtn">
+          <input type="radio" class="btn-check" name="siteBtn" id="btnSleeper" value="Sleeper" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="btnSleeper">Sleeper</label>
+        
+          <input type="radio" class="btn-check" name="siteBtn" id="btnESPN" value="ESPN" autocomplete="off" disabled>
+          <label class="btn btn-dark" for="btnESPN">ESPN</label>
+        
+          <input type="radio" class="btn-check" name="siteBtn" id="btnYahoo" value="Yahoo" autocomplete="off" disabled>
+          <label class="btn btn-dark" for="btnYahoo">Yahoo</label>
+        </div>
 
-          <div class="container">
-            <div class="row">
-              <div class="col d-flex align-items-center">
-                
+        <!-- Fantasy style buttons -->
+        <div class="btn-group spacingStyle mt-3" role="group" aria-label="Fantasy style group" id="fantasyStyleBtn">
+          <input type="radio" class="btn-check" name="fantasyStyleBtn" id="btnReDraft" value="ReDraft" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="btnReDraft">Re-Draft</label>
 
-              </div>
-              <div class="col d-flex align-items-center justify-content-end">
-                <button type="button" id="saveBtn" class="btn btn-primary">Save</button>
-              </div>
+          <input type="radio" class="btn-check" name="fantasyStyleBtn" id="btnDynasty" value="Dynasty" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnDynasty">Dynasty</label> 
+        </div>
+
+        <!-- Type buttons -->
+        <div class="btn-group spacingStyle mt-3" role="group" aria-label="Type group" id="typeBtn">
+          <input type="radio" class="btn-check" name="typeBtn" id="btnPPR" value="PPR" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="btnPPR">PPR</label>
+
+          <input type="radio" class="btn-check" name="typeBtn" id="btnSuperflex" value="Superflex" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnSuperflex">Superflex</label>
+
+          <input type="radio" class="btn-check" name="typeBtn" id="btnHalfPPR" value="HalfPPR" autocomplete="off" disabled>
+          <label class="btn btn-dark" for="btnHalfPPR">Half PPR</label>
+        
+          <input type="radio" class="btn-check" name="typeBtn" id="btnNonPPR" value="NonPPR" autocomplete="off" disabled>
+          <label class="btn btn-dark" for="btnNonPPR">Non PPR</label>
+        </div>
+        
+        <!-- Save button row -->
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col d-flex align-items-center justify-content-end">
+              <button type="button" id="saveBtn" class="btn btn-primary">Save</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <script src="popup.js"></script>
-</body>
+    <!-- Script for handling button clicks -->
+    <script src="popup.js"></script>
+  </body>
 </html>

@@ -1,1472 +1,167 @@
 // content.js
-const data = [
-  {
-    "Name": "Ja'Marr Chase",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Bijan Robinson",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Saquon Barkley",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Justin Jefferson",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Jahmyr Gibbs",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "CeeDee Lamb",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Malik Nabers",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Puka Nacua",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Christian McCaffrey",
-    "SleepervFP": -8
-  },
-  {
-    "Name": "Amon-Ra St. Brown",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Ashton Jeanty",
-    "SleepervFP": -3
-  },
-  {
-    "Name": "Derrick Henry",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Nico Collins",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "De'Von Achane",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Brian Thomas",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Brock Bowers",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Drake London",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "A.J. Brown",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Jonathan Taylor",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Josh Jacobs",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Bucky Irving",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Ladd McConkey",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Josh Allen",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Lamar Jackson",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Trey McBride",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Chase Brown",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Tyreek Hill",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Tee Higgins",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Kyren Williams",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Garrett Wilson",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Jayden Daniels",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Jaxon Smith-Njigba",
-    "SleepervFP": 7
-  },
-  {
-    "Name": "Breece Hall",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Davante Adams",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "James Cook",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Marvin Harrison",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "George Kittle",
-    "SleepervFP": -3
-  },
-  {
-    "Name": "Terry McLaurin",
-    "SleepervFP": 6
-  },
-  {
-    "Name": "Mike Evans",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Jalen Hurts",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Omarion Hampton",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "Joe Burrow",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Kenneth Walker",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Alvin Kamara",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "DJ Moore",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Rashee Rice",
-    "SleepervFP": 4
-  },
-  {
-    "Name": "Chuba Hubbard",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "DK Metcalf",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Courtland Sutton",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "James Conner",
-    "SleepervFP": -4
-  },
-  {
-    "Name": "Xavier Worthy",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "Sam LaPorta",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Jameson Williams",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "DeVonta Smith",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Zay Flowers",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Tetairoa McMillan",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Patrick Mahomes",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Joe Mixon",
-    "SleepervFP": 10
-  },
-  {
-    "Name": "George Pickens",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "David Montgomery",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "D'Andre Swift",
-    "SleepervFP": -18
-  },
-  {
-    "Name": "RJ Harvey",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "TreVeyon Henderson",
-    "SleepervFP": -10
-  },
-  {
-    "Name": "Calvin Ridley",
-    "SleepervFP": -14
-  },
-  {
-    "Name": "T.J. Hockenson",
-    "SleepervFP": 10
-  },
-  {
-    "Name": "Travis Hunter",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Jaylen Waddle",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Travis Kelce",
-    "SleepervFP": -6
-  },
-  {
-    "Name": "Baker Mayfield",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Kaleb Johnson",
-    "SleepervFP": -16
-  },
-  {
-    "Name": "Isiah Pacheco",
-    "SleepervFP": 6
-  },
-  {
-    "Name": "Aaron Jones",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Jerry Jeudy",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Chris Olave",
-    "SleepervFP": 12
-  },
-  {
-    "Name": "Rome Odunze",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Tony Pollard",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Bo Nix",
-    "SleepervFP": -4
-  },
-  {
-    "Name": "Jordan Addison",
-    "SleepervFP": 12
-  },
-  {
-    "Name": "Chris Godwin",
-    "SleepervFP": 11
-  },
-  {
-    "Name": "Mark Andrews",
-    "SleepervFP": -3
-  },
-  {
-    "Name": "Deebo Samuel",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Jauan Jennings",
-    "SleepervFP": -15
-  },
-  {
-    "Name": "Brian Robinson",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Stefon Diggs",
-    "SleepervFP": -12
-  },
-  {
-    "Name": "Evan Engram",
-    "SleepervFP": -8
-  },
-  {
-    "Name": "Jakobi Meyers",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Kyler Murray",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Khalil Shakir",
-    "SleepervFP": 6
-  },
-  {
-    "Name": "Cooper Kupp",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Tyrone Tracy",
-    "SleepervFP": 10
-  },
-  {
-    "Name": "Ricky Pearsall",
-    "SleepervFP": -9
-  },
-  {
-    "Name": "Jaylen Warren",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "David Njoku",
-    "SleepervFP": -6
-  },
-  {
-    "Name": "Jayden Reed",
-    "SleepervFP": -4
-  },
-  {
-    "Name": "Brock Purdy",
-    "SleepervFP": -13
-  },
-  {
-    "Name": "Travis Etienne ",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Matthew Golden",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "Justin Fields",
-    "SleepervFP": -33
-  },
-  {
-    "Name": "Jared Goff",
-    "SleepervFP": 7
-  },
-  {
-    "Name": "Cam Skattebo",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "Quinshon Judkins",
-    "SleepervFP": 29
-  },
-  {
-    "Name": "Dak Prescott",
-    "SleepervFP": -20
-  },
-  {
-    "Name": "Jordan Mason",
-    "SleepervFP": -25
-  },
-  {
-    "Name": "Caleb Williams",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Josh Downs",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Emeka Egbuka",
-    "SleepervFP": -9
-  },
-  {
-    "Name": "Tyler Warren",
-    "SleepervFP": 6
-  },
-  {
-    "Name": "Justin Herbert",
-    "SleepervFP": 5
-  },
-  {
-    "Name": "Tucker Kraft",
-    "SleepervFP": -10
-  },
-  {
-    "Name": "Javonte Williams",
-    "SleepervFP": 4
-  },
-  {
-    "Name": "J.K. Dobbins",
-    "SleepervFP": -36
-  },
-  {
-    "Name": "Zach Charbonnet",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Rhamondre Stevenson",
-    "SleepervFP": 6
-  },
-  {
-    "Name": "Michael Pittman",
-    "SleepervFP": 5
-  },
-  {
-    "Name": "Najee Harris",
-    "SleepervFP": 28
-  },
-  {
-    "Name": "Brandon Aiyuk",
-    "SleepervFP": 26
-  },
-  {
-    "Name": "Keon Coleman",
-    "SleepervFP": -3
-  },
-  {
-    "Name": "Darnell Mooney",
-    "SleepervFP": 8
-  },
-  {
-    "Name": "Colston Loveland",
-    "SleepervFP": 7
-  },
-  {
-    "Name": "Jordan Love",
-    "SleepervFP": 4
-  },
-  {
-    "Name": "Tyjae Spears",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Drake Maye",
-    "SleepervFP": -3
-  },
-  {
-    "Name": "Jayden Higgins",
-    "SleepervFP": -6
-  },
-  {
-    "Name": "Dalton Kincaid",
-    "SleepervFP": 11
-  },
-  {
-    "Name": "J.J. McCarthy",
-    "SleepervFP": -14
-  },
-  {
-    "Name": "Jonnu Smith",
-    "SleepervFP": 49
-  },
-  {
-    "Name": "C.J. Stroud",
-    "SleepervFP": 6
-  },
-  {
-    "Name": "Dallas Goedert",
-    "SleepervFP": 5
-  },
-  {
-    "Name": "Rachaad White",
-    "SleepervFP": 5
-  },
-  {
-    "Name": "Tre Harris",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Jake Ferguson",
-    "SleepervFP": 14
-  },
-  {
-    "Name": "Rashid Shaheed",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Jaydon Blue",
-    "SleepervFP": -1
-  },
-  {
-    "Name": "Marquise Brown",
-    "SleepervFP": -14
-  },
-  {
-    "Name": "Tank Bigsby",
-    "SleepervFP": 9
-  },
-  {
-    "Name": "Isaac Guerendo",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Bhayshul Tuten",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Kyle Pitts",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Luther Burden III",
-    "SleepervFP": 7
-  },
-  {
-    "Name": "Austin Ekeler",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "Rashod Bateman",
-    "SleepervFP": -16
-  },
-  {
-    "Name": "Trevor Lawrence",
-    "SleepervFP": -4
-  },
-  {
-    "Name": "Christian Kirk",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Marvin Mims ",
-    "SleepervFP": 8
-  },
-  {
-    "Name": "Denver Broncos",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Trey Benson",
-    "SleepervFP": -6
-  },
-  {
-    "Name": "Ray Davis",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Michael Penix ",
-    "SleepervFP": -10
-  },
-  {
-    "Name": "Tua Tagovailoa",
-    "SleepervFP": -12
-  },
-  {
-    "Name": "Nick Chubb",
-    "SleepervFP": -23
-  },
-  {
-    "Name": "Isaiah Likely",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Matthew Stafford",
-    "SleepervFP": -7
-  },
-  {
-    "Name": "Tyler Allgeier",
-    "SleepervFP": -2
-  },
-  {
-    "Name": "Cam Ward",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Kyle Williams",
-    "SleepervFP": 17
-  },
-  {
-    "Name": "Bryce Young",
-    "SleepervFP": -10
-  },
-  {
-    "Name": "Philadelphia Eagles",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jerome Ford",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Dylan Sampson",
-    "SleepervFP": -9
-  },
-  {
-    "Name": "Adam Thielen",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Zach Ertz",
-    "SleepervFP": 11
-  },
-  {
-    "Name": "Hunter Henry",
-    "SleepervFP": 8
-  },
-  {
-    "Name": "Pittsburgh Steelers",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Baltimore Ravens",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jack Bech",
-    "SleepervFP": 24
-  },
-  {
-    "Name": "Jalen McMillan",
-    "SleepervFP": 24
-  },
-  {
-    "Name": "Houston Texans",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Xavier Legette",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Jaylen Wright",
-    "SleepervFP": -3
-  },
-  {
-    "Name": "Minnesota Vikings",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Brandon Aubrey",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Quentin Johnston",
-    "SleepervFP": 5
-  },
-  {
-    "Name": "Geno Smith",
-    "SleepervFP": -11
-  },
-  {
-    "Name": "Cedric Tillman",
-    "SleepervFP": -9
-  },
-  {
-    "Name": "Braelon Allen",
-    "SleepervFP": 5
-  },
-  {
-    "Name": "Rico Dowdle",
-    "SleepervFP": 49
-  },
-  {
-    "Name": "Sam Darnold",
-    "SleepervFP": -10
-  },
-  {
-    "Name": "Buffalo Bills",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Cameron Dicker",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Romeo Doubs",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Mike Gesicki",
-    "SleepervFP": 17
-  },
-  {
-    "Name": "DeAndre Hopkins",
-    "SleepervFP": 8
-  },
-  {
-    "Name": "Brenton Strange",
-    "SleepervFP": 21
-  },
-  {
-    "Name": "Wan'Dale Robinson",
-    "SleepervFP": 21
-  },
-  {
-    "Name": "Cade Otton",
-    "SleepervFP": 14
-  },
-  {
-    "Name": "Jake Bates",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Roschon Johnson",
-    "SleepervFP": 9
-  },
-  {
-    "Name": "Kareem Hunt",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Chris Boswell",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Joshua Palmer",
-    "SleepervFP": 13
-  },
-  {
-    "Name": "Anthony Richardson",
-    "SleepervFP": 12
-  },
-  {
-    "Name": "DeMario Douglas",
-    "SleepervFP": 3
-  },
-  {
-    "Name": "Aaron Rodgers",
-    "SleepervFP": -5
-  },
-  {
-    "Name": "Ka'imi Fairbairn",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Pat Freiermuth",
-    "SleepervFP": 51
-  },
-  {
-    "Name": "Chig Okonkwo",
-    "SleepervFP": 0
-  },
-  {
-    "Name": "Kansas City Chiefs",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "San Francisco 49ers",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Justice Hill",
-    "SleepervFP": 4
-  },
-  {
-    "Name": "Chase McLaughlin",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Detroit Lions",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Pat Bryant",
-    "SleepervFP": 16
-  },
-  {
-    "Name": "Will Shipley",
-    "SleepervFP": 10
-  },
-  {
-    "Name": "Keenan Allen",
-    "SleepervFP": 29
-  },
-  {
-    "Name": "Mason Taylor",
-    "SleepervFP": 36
-  },
-  {
-    "Name": "Harrison Butker",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Wil Lutz",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Blake Corum",
-    "SleepervFP": 32
-  },
-  {
-    "Name": "Alec Pierce",
-    "SleepervFP": 19
-  },
-  {
-    "Name": "Jarquez Hunter",
-    "SleepervFP": 22
-  },
-  {
-    "Name": "MarShawn Lloyd",
-    "SleepervFP": 1
-  },
-  {
-    "Name": "Darren Waller",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Elijah Arroyo",
-    "SleepervFP": 2
-  },
-  {
-    "Name": "Jaylin Noel",
-    "SleepervFP": 22
-  },
-  {
-    "Name": "Brashard Smith",
-    "SleepervFP": 11
-  },
-  {
-    "Name": "Miles Sanders",
-    "SleepervFP": -13
-  },
-  {
-    "Name": "Jason Sanders",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Dallas Cowboys",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "DJ Giddens",
-    "SleepervFP": 20
-  },
-  {
-    "Name": "Jake Elliott",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Michael Wilson",
-    "SleepervFP": 15
-  },
-  {
-    "Name": "Chicago Bears",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Los Angeles Chargers",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "New England Patriots",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tyler Bass",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Dyami Brown",
-    "SleepervFP": 12
-  },
-  {
-    "Name": "Shedeur Sanders",
-    "SleepervFP": 24
-  },
-  {
-    "Name": "Dalton Schultz",
-    "SleepervFP": 37
-  },
-  {
-    "Name": "Russell Wilson",
-    "SleepervFP": 17
-  },
-  {
-    "Name": "Andrei Iosivas",
-    "SleepervFP": -10
-  },
-  {
-    "Name": "Los Angeles Rams",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Seattle Seahawks",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tampa Bay Buccaneers",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Woody Marks",
-    "SleepervFP": 9
-  },
-  {
-    "Name": "Darius Slayton",
-    "SleepervFP": 27
-  },
-  {
-    "Name": "Green Bay Packers",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Calvin Austin III",
-    "SleepervFP": 9
-  },
-  {
-    "Name": "Tyler Lockett",
-    "SleepervFP": 36
-  },
-  {
-    "Name": "Evan McPherson",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Devin Neal",
-    "SleepervFP": 59
-  },
-  {
-    "Name": "Dont'e Thornton ",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Matt Gay",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jalen Royals",
-    "SleepervFP": 43
-  },
-  {
-    "Name": "Cincinnati Bengals",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "New York Giants",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Arizona Cardinals",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tahj Brooks",
-    "SleepervFP": 12
-  },
-  {
-    "Name": "Cleveland Browns",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "New York Jets",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jacory Croskey-Merritt",
-    "SleepervFP": 20
-  },
-  {
-    "Name": "Juwan Johnson",
-    "SleepervFP": 25
-  },
-  {
-    "Name": "Brandon McManus",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Daniel Jones",
-    "SleepervFP": 22
-  },
-  {
-    "Name": "Younghoe Koo",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tyler Loop",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Kyle Monangai",
-    "SleepervFP": 37
-  },
-  {
-    "Name": "Washington Commanders",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Elic Ayomanor",
-    "SleepervFP": 51
-  },
-  {
-    "Name": "Jalen Coker",
-    "SleepervFP": 65
-  },
-  {
-    "Name": "Tyler Shough",
-    "SleepervFP": 40
-  },
-  {
-    "Name": "Jaxson Dart",
-    "SleepervFP": 45
-  },
-  {
-    "Name": "Theo Johnson",
-    "SleepervFP": 53
-  },
-  {
-    "Name": "Keaton Mitchell",
-    "SleepervFP": 25
-  },
-  {
-    "Name": "Will Reichard",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Ja'Tavion Sanders",
-    "SleepervFP": 60
-  },
-  {
-    "Name": "Daniel Carlson",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Dontayvion Wicks",
-    "SleepervFP": 46
-  },
-  {
-    "Name": "Amari Cooper",
-    "SleepervFP": 86
-  },
-  {
-    "Name": "Jaleel McLaughlin",
-    "SleepervFP": 51
-  },
-  {
-    "Name": "Jake Moody",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Joshua Karty",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Ray-Ray McCloud III",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Denzel Mims",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Zack Moss",
-    "SleepervFP": 33
-  },
-  {
-    "Name": "Raheem Mostert",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Roman Wilson",
-    "SleepervFP": 59
-  },
-  {
-    "Name": "Terrance Ferguson",
-    "SleepervFP": 80
-  },
-  {
-    "Name": "Elijah Mitchell",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Indianapolis Colts",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Miami Dolphins",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Cairo Santos",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Ollie Gordon II",
-    "SleepervFP": 59
-  },
-  {
-    "Name": "Cole Kmet",
-    "SleepervFP": 68
-  },
-  {
-    "Name": "Jason Myers",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tutu Atwell",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Diontae Johnson",
-    "SleepervFP": 59
-  },
-  {
-    "Name": "Adonai Mitchell",
-    "SleepervFP": 74
-  },
-  {
-    "Name": "Sean Tucker",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Harold Fannin ",
-    "SleepervFP": 67
-  },
-  {
-    "Name": "Noah Gray",
-    "SleepervFP": 58
-  },
-  {
-    "Name": "Keandre Lambert-Smith",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jalen Nailor",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Noah Brown",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tyler Higbee",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jordan James",
-    "SleepervFP": 94
-  },
-  {
-    "Name": "Kendre Miller",
-    "SleepervFP": 50
-  },
-  {
-    "Name": "Isaac TeSlaa",
-    "SleepervFP": 60
-  },
-  {
-    "Name": "Atlanta Falcons",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tyler Conklin",
-    "SleepervFP": 52
-  },
-  {
-    "Name": "Audric Estime",
-    "SleepervFP": 76
-  },
-  {
-    "Name": "Trevor Etienne",
-    "SleepervFP": 62
-  },
-  {
-    "Name": "Jalen Tolbert",
-    "SleepervFP": 53
-  },
-  {
-    "Name": "Las Vegas Raiders",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tank Dell",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Joe Flacco",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Troy Franklin",
-    "SleepervFP": 64
-  },
-  {
-    "Name": "Cam Little",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Josh Reynolds",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Justin Tucker",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "KaVontae Turpin",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Devaughn Vele",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Devontez Walker",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Malik Washington",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jordan Whittington",
-    "SleepervFP": 80
-  },
-  {
-    "Name": "Odell Beckham",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "A.J. Dillon",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Kenneth Gainwell",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Allen Lazard",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Xavier Restrepo",
-    "SleepervFP": 86
-  },
-  {
-    "Name": "Tyquan Thornton",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Carolina Panthers",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jacksonville Jaguars",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Andy Borregales",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jermaine Burton",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Kirk Cousins",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Noah Fant",
-    "SleepervFP": 78
-  },
-  {
-    "Name": "Oronde Gadsden",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Graham Gano",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Blake Grupe",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jimmy Horn ",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tory Horton",
-    "SleepervFP": 87
-  },
-  {
-    "Name": "Jalin Hyatt",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Tez Johnson",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Kyle Juszczyk",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jaylin Lane",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jalen Milroe",
-    "SleepervFP": 93
-  },
-  {
-    "Name": "Hunter Renfrow",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Ben Sinnott",
-    "SleepervFP": 102
-  },
-  {
-    "Name": "JuJu Smith-Schuster",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Christian Watson",
-    "SleepervFP": 95
-  },
-  {
-    "Name": "Olamide Zaccheaus",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "New Orleans Saints",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Kayshon Boutte",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Malachi Corley",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Isaiah Davis",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jahan Dotson",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Dillon Gabriel",
-    "SleepervFP": 97
-  },
-  {
-    "Name": "Taysom Hill",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Jude McAtamney",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "John Metchie III",
-    "SleepervFP": "-"
-  },
-  {
-    "Name": "Elijah Moore",
-    "SleepervFP": "-"
+var data = [];
+
+function loadDataFromSettings(site, fantasyStyle, type) {
+  console.log(`${site}_${fantasyStyle}_${type}.json`);
+  const dataFile = `${site}_${fantasyStyle}_${type}.json`;
+  console.log("Loading data file:", dataFile);
+
+  fetch(chrome.runtime.getURL(`data/${dataFile}`))
+    .then(res => res.json())
+    .then(newData => {
+      window.playerData = newData;
+      console.log(`Loaded data file: ${dataFile}`);
+      modifyParagraphBackground();
+    })
+    .catch(err => console.error('Error loading new data file:', err));
+}
+
+// Listen for updates from popup
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === 'updateSettings') {
+    console.log('Received new settings:', message);
+    loadDataFromSettings(message.site, message.fantasyStyle, message.type);
   }
-];
+});
+
+// Run on first load
+chrome.storage.sync.get(['site', 'fantasyStyle', 'type'], (result) => {
+  const site = result.site || 'Sleeper';        // default
+  const fantasyStyle = result.fantasyStyle || 'ReDraft';
+  const type = result.type || 'PPR';
+
+  loadDataFromSettings(site, fantasyStyle, type);
+});
+
 
 // Function to modify the background color of all paragraph elements
 function modifyParagraphBackground() {
+    const innerScrollContainer = document.querySelectorAll('div[class*="player-rank-item2"]');
 
-    const innerScrollContainer =  document.querySelectorAll('div[class*="player-rank-item2"]');
-    //console.log(innerScrollContainer.length);
+    innerScrollContainer.forEach((child, index) => {
+        var divElement = document.createElement("div");
+        var spanElement = document.createElement("span");
+        spanElement.textContent = "test";
+        spanElement.className = "value";
+        divElement.appendChild(spanElement);
+        divElement.className = "adp col-sml stat-cell new";
 
-    innerScrollContainer.forEach((child , index)=>{
-      var divElement = document.createElement("div");
-      var spanElement = document.createElement("span");
-      spanElement.textContent = "test";
-      spanElement.className = "value"
+        var divElement1 = document.createElement("div");
+        var spanElement1 = document.createElement("span");
+        spanElement1.textContent = "test";
+        spanElement1.className = "value";
+        divElement1.appendChild(spanElement1);
+        divElement1.className = "adp col-sml stat-cell new1";
 
-      divElement.appendChild(spanElement);
-      divElement.className = "adp col-sml stat-cell new";
+        const nameWrapper = child.querySelector('.name-wrapper');
+        if (!nameWrapper) return;
 
-      const nameWrapper = child.querySelector('.name-wrapper');
-      if (!nameWrapper) return;
+        const rank = child.querySelector('.rank');
+        if (!rank) return;
 
-      const nameOnly = Array.from(nameWrapper.childNodes)
-        .filter(node => node.nodeType === Node.TEXT_NODE)
-        .map(node => node.textContent.trim())
-        .join('');
-      
-      var obj = data.find(o => o.Name === nameOnly);
-
-      if(obj == undefined){
-        // console.log("Object not found for player: " + nameOnly);
-        spanElement.textContent = "N/A";
-        
-      }else{
-        let resultRed = 255;
-        let resultGreen = 255;
-        let resultBlue = 255;
-
-        if (obj.SleepervFP > 0) {
-          const temp = obj.SleepervFP * 50; // adjust scale if needed
-          resultRed = 200 - temp;
-          resultBlue = 200 - temp;
-        } else if (obj.SleepervFP < 0) {
-          const temp = -obj.SleepervFP * 10;
-          resultGreen = 200 - temp;
-          resultBlue = 200 - temp;
+        let rankInt = parseInt(rank.textContent.trim());
+        // const nameOnly = nameWrapper.innerText.trim();
+        function normalizeName(name) {
+          return name.replace(/\s+/g, ' ').trim();
         }
 
-        spanElement.textContent = obj.SleepervFP;
-        spanElement.style.color=`rgb(${resultRed},${resultGreen},${resultBlue})`;
+        const nameOnly = Array.from(nameWrapper.childNodes)
+          .filter(node => node.nodeType === Node.TEXT_NODE) // only text, no elements
+          .map(node => node.textContent.trim())
+          .join(' ')
+          .trim();
+        var obj = window.playerData.find(o => normalizeName(o.Player) === nameOnly);
+
+        if (!obj) {
+            spanElement.textContent = "N/A";
+            spanElement1.textContent = "N/A";
+            console.log("Sleeper Name:", `"${nameOnly}"`);
+            console.log("First 5 JSON Names:", data.slice(0, 5).map(o => `"${o.Player}"`));
+        } else {
+            const compRank = obj["Composite Rank"];
+            const diff = rankInt - compRank;
+
+            spanElement.textContent = compRank.toFixed(2);
+            spanElement1.textContent = diff.toFixed(2);
+
+            // --- Color coding ---
+            // For Composite Rank: highlight top 20 players
+            if (compRank <= 20) {
+                spanElement.style.color = "rgb(0, 200, 0)"; // green
+            } else  if (compRank <= 50) {
+                spanElement.style.color = "rgba(111, 163, 52, 1)"; // yellow
+            } else  if (compRank <= 100) {
+                spanElement.style.color = "rgb(200, 200, 0)"; // yellow
+            } else  if (compRank <= 150) {
+                spanElement.style.color = "rgba(214, 143, 37, 1)"; // yellow
+            } else  if (compRank <= 250) {
+                spanElement.style.color = "rgba(250, 106, 96, 1)"; // yellow
+            }else {
+                spanElement.style.color = "rgba(248, 51, 51, 1)"; // red
+            }
+
+            // For DIFF: green if positive, red if negative
+            if (diff <= -10) {
+                spanElement1.style.color = "rgb(200, 0, 0)"; // much worse
+            } else if (diff <= -5) {
+                spanElement1.style.color = "rgba(255, 174, 0, 1)"; // much worse
+            } else if (diff >= 5) {
+                spanElement1.style.color = "rgba(255, 174, 0, 1)"; // much worse
+            } else if (diff >= 10) {
+                spanElement1.style.color = "rgb(0, 200, 0)"; // much better
+            } else {
+                spanElement1.style.color = "rgb(180, 180, 180)"; // neutral
+            }
+        }
+
+        const targetElement = child.querySelector('.adp.col-sml.stat-cell');
+        if (!child.querySelector('.adp.col-sml.stat-cell.new1')) {
+            targetElement.parentNode.insertBefore(divElement1, targetElement);
+        }
+        if (!child.querySelector('.adp.col-sml.stat-cell.new')) {
+            targetElement.parentNode.insertBefore(divElement, targetElement);
+        }
+
+        const positionDiv = child.querySelector('.position');
+
+        var spanElement2 = document.createElement("span");
+        var divElement2 = document.createElement("div");
+        spanElement2.className = "teir"
+        spanElement2.style = "padding-left: 6px;"
         
-      }
+        tierColors = {
+          1: "rgba(223, 202, 18, 1);",
+          2: "rgba(255, 165, 0, 1);",
+          3: "rgba(136, 8, 8, 1);",
+          4: "rgba(128, 128, 0, 1);",
+          5: "rgba(0, 163, 108, 1);",
+          6: "rgba(100, 149, 237, 1);",
+          7: "rgba(20, 52, 164, 1);",
+          8: "rgba(	128, 0, 128, 1);",
+          9: "rgba(218, 112, 214, 1);",
+          10: "rgba(255, 0, 255, 1);",
+          11: "rgba(250, 160, 160, 1);",
+          12: "rgba(150, 141, 106, 1);",
+          13: "rgba(48, 25, 52, 1);",
+          14: "rgba(	2, 48, 32, 1);",
+          15: "rgba(	53, 57, 53, 1);",
+        }
 
-      const targetElement = child.querySelector('.adp.col-sml.stat-cell')
-      var myElem = child.querySelector('.adp.col-sml.stat-cell.new');
-
-      if (myElem === null){
-        targetElement.parentNode.insertBefore(divElement, targetElement);
-        myElem = child.querySelector('.adp.col-sml.stat-cell.new');
-      }
-      
+        divElement2.style = "display: flex; justify-content: center; align-items: center; width: 15px; height: 15px; font-size: 12px; font-weight: 800;border-radius: 2px; background-color:"+ tierColors[obj.TIERS] || "rgba(0, 0, 0, 1);"; // Default to white if no match
+        divElement2.textContent = obj.TIERS;
+        spanElement2.appendChild(divElement2);
 
 
+        if (!positionDiv.querySelector('.teir')) {
+            positionDiv.appendChild(spanElement2);
+        }
+    //       content.js:8555 Uncaught NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.
+    // at content.js:8555:38
+    // at NodeList.forEach (<anonymous>)
+    // at modifyParagraphBackground (content.js:8439:26)
+    // at contentChanged (content.js:8640:3)
+        
     });
-    
 }
 
 function modifyHeader(retries = 5, delay = 500) {
@@ -1477,68 +172,69 @@ function modifyHeader(retries = 5, delay = 500) {
     "#root > div:nth-child(1) > div.draft-layout-container > div.draftboard-page.theme-dark > div.bottom-container > div.bottom-panel-wrapper > div.rankings > div > div.body-container > div.header > div:nth-child(1)"
   );
 
-  // Retry if first header row is not found
   if (!headerRows1) {
     console.warn("Header row 1 not found. Retrying...");
     if (retries > 0) {
       setTimeout(() => modifyHeader(retries - 1, delay), delay);
-    } else {
-      console.error("Header row 1 still not found after retries.");
     }
     return;
   }
 
   // Insert blank header if not already added
   if (!headerRows1.querySelector(".adp.col-sml.new")) {
-    const newHeaderBlank = document.createElement("div");
-    newHeaderBlank.className = "adp col-sml new";
+    const newHeaderBlankCRK = document.createElement("div");
+    newHeaderBlankCRK.className = "adp col-sml new"; // C-RK blank
+
+    const newHeaderBlankDiff = document.createElement("div");
+    newHeaderBlankDiff.className = "adp col-sml new1"; // DIFF blank
+
     const referenceNodeBlank = headerRows1.children[2];
-
     if (referenceNodeBlank) {
-      headerRows1.insertBefore(newHeaderBlank, referenceNodeBlank);
+      // Insert in correct order: C-RK, then DIFF
+      headerRows1.insertBefore(newHeaderBlankDiff, referenceNodeBlank);
+      headerRows1.insertBefore(newHeaderBlankCRK, newHeaderBlankDiff);
     } else {
-      headerRows1.appendChild(newHeaderBlank);
+      headerRows1.appendChild(newHeaderBlankCRK);
+      headerRows1.appendChild(newHeaderBlankDiff);
     }
-
     console.log("Blank header added.");
   } else {
     console.log("Blank header already added.");
   }
 
-  // Second header row (with vFP text)
   const headerRows2 = document.querySelector(
     "#root > div:nth-child(1) > div.draft-layout-container > div.draftboard-page.theme-dark > div.bottom-container > div.bottom-panel-wrapper > div.rankings > div > div.body-container > div.header > div:nth-child(2)"
   );
 
-  // Retry if second header row is not found
   if (!headerRows2) {
     console.warn("Header row 2 not found. Retrying...");
     if (retries > 0) {
       setTimeout(() => modifyHeader(retries - 1, delay), delay);
-    } else {
-      console.error("Header row 2 still not found after retries.");
     }
     return;
   }
 
-  // Insert vFP header if not already added
   if (!headerRows2.querySelector(".adp.col-sml.new")) {
-    const newHeader = document.createElement("div");
-    newHeader.textContent = "vFP";
-    newHeader.className = "adp col-sml new";
+    const newHeaderCRK = document.createElement("div");
+    newHeaderCRK.textContent = "DIFF";
+    newHeaderCRK.className = "adp col-sml new";
 
-    const insertAt = 2;
-    const referenceNode = headerRows2.children[insertAt];
+    const newHeaderDiff = document.createElement("div");
+    newHeaderDiff.textContent = "C-RK";
+    newHeaderDiff.className = "adp col-sml new1";
 
+    const referenceNode = headerRows2.children[2];
     if (referenceNode) {
-      headerRows2.insertBefore(newHeader, referenceNode);
+      // Insert in correct order: C-RK, then DIFF
+      headerRows2.insertBefore(newHeaderDiff, referenceNode);
+      headerRows2.insertBefore(newHeaderCRK, newHeaderDiff);
     } else {
-      headerRows2.appendChild(newHeader);
+      headerRows2.appendChild(newHeaderCRK);
+      headerRows2.appendChild(newHeaderDiff);
     }
-
-    console.log("vFP header successfully added.");
+    console.log("Headers successfully added.");
   } else {
-    console.log("vFP header already added.");
+    console.log("Headers already added.");
   }
 }
 

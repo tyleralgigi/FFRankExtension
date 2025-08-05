@@ -1,41 +1,42 @@
-let siteValue = "";;
-let typeValue = "";
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('saveBtn').addEventListener('click', () => {
+    const site = document.querySelector('input[name="siteBtn"]:checked')?.value;
+    const fantasyStyle = document.querySelector('input[name="fantasyStyleBtn"]:checked')?.value;
+    const type = document.querySelector('input[name="typeBtn"]:checked')?.value;
 
+    console.log('New settings selected:', { site, fantasyStyle, type });
 
-document.addEventListener('DOMContentLoaded', async () => {
-    chrome.storage.sync.get([
-        'siteValue',
-        'typeValue'
-    ], function(items) {
-        if (!chrome.runtime.error) {
-            console.log("btn"+items.siteValue);
-            console.log("btn"+items.typeValue);
-            document.getElementById("btn"+items.siteValue).checked = true;
-            document.getElementById("btn"+items.typeValue).checked = true;
-        }else{
-            console.log(items);
-            document.getElementById("btnSleeper").checked = true;
-            document.getElementById("btnPPR").checked = true;
-        }
+    // Store settings
+    chrome.storage.sync.set({ site, fantasyStyle, type }, () => {
+      console.log('Settings saved to Chrome storage');
     });
-    saveSettings()
+
+    // Send to content script so it updates immediately
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, {
+        action: 'updateSettings',
+        site,
+        fantasyStyle,
+        type
+      });
+    });
+  });
+
+  // Load stored settings on popup open
+  chrome.storage.sync.get(['site', 'fantasyStyle', 'type'], (result) => {
+    if (result.site) {
+      document.getElementById(`btn${result.site}`)?.click();
+    }
+    if (result.fantasyStyle) {
+      document.getElementById(`btn${result.fantasyStyle}`)?.click();
+    }
+    if (result.type) {
+      document.getElementById(`btn${result.type}`)?.click();
+    }
+  });
 });
 
+// document.getElementById("saveBtn").addEventListener("click", saveSettings);
 
-document.getElementById("saveBtn").addEventListener("click", saveSettings);
 
-
-function saveSettings(){
-    siteValue = document.querySelector('input[name="siteBtn"]:checked').value;
-    typeValue = document.querySelector('input[name="typeBtn"]:checked').value;
-    console.log(siteValue);
-    console.log(typeValue);
-
-    chrome.storage.sync.set({ "siteValue" : siteValue, "typeValue" : typeValue }, function() {
-        if (chrome.runtime.error) {
-        console.log("Runtime error.");
-        }
-    });
-
-}
 
